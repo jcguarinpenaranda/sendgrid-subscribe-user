@@ -39,7 +39,7 @@ app.post('/subscribe', function(request, response){
         // case 403 means misconfiguration
         // maybe lack of process.env.SENDGRID_API_KEY
         if(res.statusCode == 403){
-            response.send(res);
+            response.render('error');
         }
 
         // add the first persisted recipient from the response
@@ -57,6 +57,7 @@ app.post('/subscribe', function(request, response){
                 sendgrid_response_body.persisted_recipients instanceof Array &&
                 sendgrid_response_body.persisted_recipients.length){
                     
+                    //add user to list
                     addUserToList(sendgrid_response_body.persisted_recipients[0], body.list_id)
                     .then(function(res){
 
@@ -67,10 +68,10 @@ app.post('/subscribe', function(request, response){
             }
         }
 
-        response.send(res);
+        response.render('success');
     })
     .catch(function(e){
-        response.send(e);
+        response.render('error');
     })
 
 });

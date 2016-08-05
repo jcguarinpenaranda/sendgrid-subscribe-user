@@ -32,11 +32,9 @@ module.exports = function(params, options){
         }
 
         if(response.statusCode && response.statusCode !== 201){
-            console.log('created contact FAILED');
             defer.reject(response);
         }
 
-        console.log('created contact OK');
         defer.resolve(response);
     })
 
