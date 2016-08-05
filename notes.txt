@@ -1,0 +1,50 @@
+
+/**
+ * 
+ * https://sendgrid.com/docs/API_Reference/Web_API_v3/Marketing_Campaigns/contactdb.html#Add-Single-Recipient-POST
+ * 
+ * 
+ * POST https://api.sendgrid.com/v3/contactdb/lists/{list_id}/recipients HTTP/1.1
+ * 
+ * [
+  "recipient_id1",
+  "recipient_id2"
+  ]
+ * 
+ * https://api.sendgrid.com/v3/contactdb/recipients HTTP/1.1
+ * 
+ * [
+  {
+    "email": "jones@example.com",
+    "last_name": "Jones",
+    "pet": "Fluffy",
+    "age": 25
+  }
+]
+
+response:
+
+{
+  "error_count": 0,
+  "error_indices": [
+
+  ],
+  "unmodified_indices": [
+
+  ],
+  "new_count": 1,
+  "persisted_recipients": [
+    "am9uZXNAZXhhbXBsZS5jb20="
+  ],
+  "updated_count": 0
+}
+ */
+
+/**
+ * 
+ * so, the workflow is easy
+ * 
+ * 1. user creates their form, and sends the
+ * list id
+ * 
+ */

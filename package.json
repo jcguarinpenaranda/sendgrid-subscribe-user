@@ -1,0 +1,24 @@
+{
+  "name": "sendgrid-subscribe-user",
+  "version": "1.0.0",
+  "description": "Server for easy subscribing users to Sendgrid and adding them to a mailing list",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Camilo Guarin P",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "q": "^1.4.1",
+    "request": "^2.74.0",
+    "sendgrid": "^4.0.1"
+  },
+  "devDependencies": {
+    "express-handlebars": "^3.0.0"
+  }
+}
